@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MvcBlog.Models.Kategori>
+
+@{ 
+    Layout = null;
+}
+
+<h4>Kategoriler</h4>
+<div class="row">
+    <div class="col-lg-6">
+        @foreach (var item in Model)
+        {
+            <ul class="list-unstyled">
+                <li>
+                    <a href="/Home/KategoriMakale/@item.KategoriId">@item.KategoriAdi (@item.Makales.Count())</a>
+                </li>
+            </ul>
+
+        }
+
+    </div>
+</div>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.KategoriAdi)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.KategoriAdi)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.KategoriId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.KategoriId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.KategoriId })
+            </td>
+        </tr>
+    }
+
+    </table>*@
